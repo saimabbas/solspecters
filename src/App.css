@@ -100,6 +100,11 @@ button {
   align-items: center;
   justify-content: flex-start;
 }
+.header-left img {
+  width: 7.5rem;
+  object-fit: cover;
+  opacity: 0.75;
+}
 .header-left a:hover {
   transform: translate(0, -3px);
 }
@@ -216,6 +221,13 @@ button {
 .mint-content button:hover {
   transform: scale(1.1);
 }
+.mint-content p {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin: 1.5rem 0 0 0;
+  width: 60%;
+  text-align: center;
+}
 .faq-content h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -239,6 +251,7 @@ button {
 }
 .faq-box {
   margin: 0 0 1.5rem 0;
+  position: relative;
 }
 .faq-a {
   background-color: var(--white);
@@ -271,6 +284,14 @@ button {
   margin: 0 0 7.5rem 0;
   position: relative;
 }
+.roadmap-box img {
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, -50%);
+  display: none;
+}
 .roadmap-box::before {
   content: "";
   position: absolute;
@@ -296,6 +317,56 @@ button {
   color: var(--white);
   font-weight: 500;
   margin: 0.5rem 0 0 0;
+}
+/* Team Section */
+.team-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0 0 2.5rem 0;
+}
+.team-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+}
+.team-card {
+  width: 100%;
+  padding: 2.5rem 2.5rem;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.team-card img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0 0 2.5rem 0;
+}
+.team-card h3 {
+  font-size: 2.25rem;
+  color: var(--white);
+  font-weight: 700;
+}
+.team-card h4 {
+  font-size: 1.75rem;
+  color: var(--white);
+  font-weight: 400;
+}
+.team-card main {
+  margin: 5rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-card main svg {
+  margin: 0 1.25rem;
+  font-size: 2.5rem;
+  color: var(--white);
 }
 .footer {
   padding: 2.5rem 0;
@@ -358,6 +429,11 @@ button {
   .box {
     padding: 0 1.5rem;
   }
+  .team-grid {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    width: 75%;
+  }
   .sp-content {
     grid-template-columns: 1fr;
   }
@@ -377,6 +453,9 @@ button {
     text-align: center;
     justify-content: center;
   }
+  /* .header-left a:nth-child(1) {
+    display: none;
+  } */
   .header-left {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -443,5 +522,8 @@ button {
   }
   .header-left a:hover {
     transform: translate(0, 0);
+  }
+  .mint-content p {
+    width: 100%;
   }
 }

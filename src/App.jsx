@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { FaTwitterSquare, FaDiscord } from "react-icons/fa";
+import { FaTwitterSquare, FaDiscord, FaLinkedin } from "react-icons/fa";
 import CharacterBox from "./components/CharacterBox";
 import Banner from "./assets/banner.png";
 import Pic0 from "./assets/0.png";
@@ -11,6 +11,11 @@ import Pic4 from "./assets/4.png";
 import Pic5 from "./assets/5.png";
 import Pic6 from "./assets/6.png";
 import Pic7 from "./assets/7.png";
+import Trans1 from "./assets/trans1.png";
+import Trans2 from "./assets/trans2.png";
+import Trans3 from "./assets/trans3.png";
+import Saim from "./assets/saim.jpg";
+import Logo from "./assets/logo.png";
 
 import { Power4 } from "gsap/dist/gsap";
 import { gsap } from "gsap";
@@ -24,6 +29,15 @@ const App = () => {
   }, []);
 
   /* Anchoring Funtions */
+  const moveTo1 = () => {
+    gsap.to(window, {
+      scrollTo: {
+        y: "#section1",
+        // offsetY: 50,
+      },
+      ease: Power4.easeInOut,
+    });
+  };
   const moveTo2 = () => {
     gsap.to(window, {
       scrollTo: {
@@ -185,6 +199,9 @@ const App = () => {
         <div className="box">
           <div className="header-content">
             <div className="header-left">
+              {/* <a onClick={moveTo1}>
+                <img src={Logo} alt="" />
+              </a> */}
               <a onClick={moveTo2}>SpecDex</a>
               <a onClick={moveTo3}>Mint</a>
               <a onClick={moveTo4}>FAQ</a>
@@ -203,7 +220,7 @@ const App = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="hero">
+      <div className="hero" id="section1">
         <img src={Banner} alt="" />
       </div>
 
@@ -377,6 +394,12 @@ const App = () => {
           <div className="mint-content">
             <h1>Specters Sold: 0/7,850</h1>
             <h1>Mint Price: 0.75 SOL</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              quos provident, aspernatur est dolorum consequatur. Repellat eos
+              ipsam illum ad ratione fugit veritatis minima nostrum dolorum quae
+              modi quia magnam beatae odio, atque quo mollitia!
+            </p>
             <button>MINT NOW</button>
           </div>
         </div>
@@ -464,6 +487,7 @@ const App = () => {
           <div className="roadmap-content">
             <h1>Roadmap</h1>
             <div className="roadmap-box">
+              <img src={Trans1} alt="" />
               <h2>1. PRE-LAUNCH</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
@@ -472,6 +496,7 @@ const App = () => {
               </p>
             </div>
             <div className="roadmap-box">
+              <img src={Trans2} alt="" />
               <h2>2. LAUNCH</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
@@ -480,6 +505,7 @@ const App = () => {
               </p>
             </div>
             <div className="roadmap-box">
+              <img src={Trans3} alt="" />
               <h2>3. 25% OF THE TOTAL BUYS</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
@@ -488,6 +514,7 @@ const App = () => {
               </p>
             </div>
             <div className="roadmap-box">
+              <img src={Trans1} alt="" />
               <h2>4. 50% OF THE TOTAL BUYS</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
@@ -496,6 +523,7 @@ const App = () => {
               </p>
             </div>
             <div className="roadmap-box">
+              <img src={Trans2} alt="" />
               <h2>5. 75% OF THE TOTAL BUYS</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
@@ -504,12 +532,60 @@ const App = () => {
               </p>
             </div>
             <div className="roadmap-box">
+              <img src={Trans3} alt="" />
               <h2>6. 100% OF THE TOTAL BUYS</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
                 expedita perspiciatis dolor tempore? Modi, a? Perspiciatis
                 cupiditate repellat suscipit beatae!
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Teams Section */}
+      <div className="team section">
+        <div className="box">
+          <div className="team-content">
+            <h1>Team</h1>
+            <div className="team-grid">
+              <div className="team-card">
+                <img src={Saim} alt="" />
+                <h3>Saim Abbas</h3>
+                <h4>Frontend Developer</h4>
+                <main>
+                  <FaTwitterSquare />
+                  <FaLinkedin />
+                </main>
+              </div>
+              <div className="team-card">
+                <img src={Saim} alt="" />
+                <h3>Saim Abbas</h3>
+                <h4>Frontend Developer</h4>
+                <main>
+                  <FaTwitterSquare />
+                  <FaLinkedin />
+                </main>
+              </div>
+              <div className="team-card">
+                <img src={Saim} alt="" />
+                <h3>Saim Abbas</h3>
+                <h4>Frontend Developer</h4>
+                <main>
+                  <FaTwitterSquare />
+                  <FaLinkedin />
+                </main>
+              </div>
+              <div className="team-card">
+                <img src={Saim} alt="" />
+                <h3>Saim Abbas</h3>
+                <h4>Frontend Developer</h4>
+                <main>
+                  <FaTwitterSquare />
+                  <FaLinkedin />
+                </main>
+              </div>
             </div>
           </div>
         </div>
